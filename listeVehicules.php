@@ -52,6 +52,11 @@
 																$resultarRsNomC->assure,	
 																$resultarRsNomC->message);
 								$voiture1->setChauffeur($nomChauffeur);
+								if($voiture1->getAssure() == 'TRUE'){
+												$voiture1->setAssure(1);
+								}else{
+												$voiture1->setAssure(0);
+								}
 								var_dump($voiture1);
 				}	catch	(PDOException	$exc)	{
 								die("Erreur requete SQL : ".$exc->getMessage());				
