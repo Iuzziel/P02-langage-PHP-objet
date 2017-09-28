@@ -6,8 +6,7 @@
 				try{
 								$sql = 'SELECT * FROM voiture';
 								Connexion::getConnexion();
-								$rs = Connexion::select($sql, PDO::FETCH_ASSOC);
-								$resultQuery = $rs->fetchAll(PDO::FETCH_ASSOC);
+								$rs1 = Connexion::select($sql, PDO::FETCH_ASSOC);
 				} catch (Exception $ex) {
 								$ex->getMessage();
 				}
@@ -24,7 +23,7 @@
 												<h1>Test Php PDO :</h1>
 								</header>
 								<section>
-												<?= var_dump($resultQuery); ?>
+												<?= var_dump($rs1); ?>
 												<a href="testRequete.php">Clique Test Requete</a>
 								</section>
     </body>

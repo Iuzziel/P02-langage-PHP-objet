@@ -1,5 +1,5 @@
 [SQL]
 host = localhost
-user = parcAuto
-passwd = afpa
+user = utilParcAuto
+passwd = parcAutoUtil
 base = parcauto
