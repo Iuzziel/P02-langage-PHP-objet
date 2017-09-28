@@ -50,7 +50,7 @@
                 echo $msg;
             }
             
-            $nomChauffeur = "ROGER";
+            $nomChauffeur = "Amstram";
             
             $sql = "SELECT * "
                 . "FROM voiture v INNER JOIN chauffeur c ON "
