@@ -1,14 +1,16 @@
 <?php 
-				require_once	'./Voiture.php'; 
-				require_once	'./PoidsLourd.php';
-				require_once	'./chauffeur.php';
-				require_once	'./listeVehicules.php';
-								
-				$tResultats = $rs->fetchAll(PDO::FETCH_ASSOC);
-				//$tResultats = $resultats->fetchAll();
-				
-				$rs->closeCursor();
+				require_once	'./Voiture.class.php'; 
+				require_once	'./dao/Connexion.php';
+				require_once	'./exception/MYSQLException.php';
 
+				try{
+								$sql = 'SELECT * FROM voiture';
+								Connexion::getConnexion();
+								$rs = Connexion::select($sql, PDO::FETCH_ASSOC);
+								$resultQuery = $rs->fetchAll(PDO::FETCH_ASSOC);
+				} catch (Exception $ex) {
+								$ex->getMessage();
+				}
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,23 +24,7 @@
 												<h1>Test Php PDO :</h1>
 								</header>
 								<section>
-												<table>
-																<tr>
-																				<th>Nom du chauffeur</th>
-																				<th>Immatriculation</th>
-																				<th>Couleur</th>
-																				<th>Puissance</th>
-																				<th>Places</th>
-																				<th>Assuré</th>
-																</tr>
-																<?php foreach	($tResultats as $donnee): ?>
-																<tr>
-																				<?php foreach	($donnee as $cellule): ?>
-																				<td><?= $cellule; ?></td>
-																				<?php endforeach; ?>
-																</tr>
-																<?php endforeach; ?>
-												</table>
+												<?= var_dump($resultQuery); ?>
 								</section>
     </body>
 </html>
