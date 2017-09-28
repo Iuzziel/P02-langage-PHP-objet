@@ -25,6 +25,7 @@
 								</header>
 								<section>
 												<?= var_dump($resultQuery); ?>
+												<a href="testRequete.php">Clique Test Requete</a>
 								</section>
     </body>
 </html>
