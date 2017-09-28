@@ -8,11 +8,11 @@ class	Voiture	{
 				protected $couleur;
 				protected $poids;
 				protected $puissance;
-				protected $capaciteReservoir;
-				protected $niveauEssence;
-				protected $nombrePlace;
+				protected $rservoir;
+				protected $essence;
+				protected $places;
 				protected $assure;
-				protected $messageTabBord;
+				protected $message;
 				//Reference
 				protected $chauffeur;
 
@@ -116,16 +116,16 @@ class	Voiture	{
 				public	function	getPuissance()	{
 								return $this->puissance;
 				}
-				public	function	getCapaciteReservoir()	{
+				public	function	getReservoir()	{
 								return $this->capaciteReservoir;
 				}
-				public	function	getNiveauEssence()	{
+				public	function	getEssence()	{
 								return $this->niveauEssence;
 				}
-				public	function	setNiveauEssence($niveauEssence)	{
+				public	function	setEssence($niveauEssence)	{
 								$this->niveauEssence = $niveauEssence;
 				}
-				public	function	getNombrePlace()	{
+				public	function	getPlaces()	{
 								return $this->nombrePlace;
 				}
 				public	function	getAssure()	{
@@ -134,10 +134,10 @@ class	Voiture	{
 				public	function	setAssure($assure)	{
 								$this->assure = $assure;
 				}
-				public	function	getMessageTabBord()	{
+				public	function	getMessage()	{
 								return $this->messageTabBord;
 				}
-				public	function	setMessageTabBord($messageTabBord)	{
+				public	function	setMessage($messageTabBord)	{
 								$this->messageTabBord = $messageTabBord;
 				}
 				/**
